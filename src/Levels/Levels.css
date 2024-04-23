@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+.steps{
+  margin-top: 108px;
+ width: 300px;
+ margin-left: 645px;
+   display: flex;
+  position: relative;
+}
+.merhele{
+  
+  width: 235px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #F4F4F4;
+  margin-top: 10px;
+  border-radius: 25px;
+  text-align: center;
+  font-family:  "Inter", sans-serif;
+font-size: 16px;
+font-weight: 400;
+line-height: 19.36px;
+color: #000000;
+transition: 1s;
+}
+.level{
+ 
+  width:235px;
+  height: 40px;
+  border-radius: 10px;
+ background-color: #103557;
+ color: #FFFFFF;
+ margin-top: 10px;
+ border-radius: 25px;
+ transform:translate(-28px);
+font-family:  "Inter", sans-serif;
+font-size: 16px;
+font-weight: 400;
+line-height: 19.36px;
+text-align: center;
+
+}
+.butons{
+  display: flex;
+  gap: 50px;
+  margin-top: 340px;
+  width: 700px;
+  justify-content: end;
+  margin-left: 663px;
+}
+.but_style{
+  width: 575px;
+  display: flex;
+  justify-content: space-between;
+}
+.but_one{
+  width: 180px;
+  height: 50px;
+  border: 1px solid #038477;
+ display: flex;
+ align-items: center;
+ border-radius: 25px;
+ gap: 13px;
+  font-family:"Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.36px;
+  text-align: left;
+  color:#038477 ;
+}
+.but_two{
+  width: 180px;
+  height: 50px;
+  background-color:#038477 ;
+  display: flex;
+ align-items: center;
+ justify-content: center;
+ border-radius: 25px;
+ gap: 13px;
+ font-family:"Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.36px;
+  text-align: left;
+  color:#FFFFFF ;
+ 
+}
+
+.arrowone{
+  margin-left: 45px;
+  color: #038477;
+}
+.arrowtwo{
+  color: #FFFFFF;
+}
+.item_frame{
+  width: 88px;
+  height: 19px;
+  margin-left: 42px;
+  
+}
+.modal{
+  
+  width: 500px;
+  height: 600px;
+ background-color: antiquewhite;
+
+ 
+}
+
+
+.sorgu{
+  width: 575px;
+  height: 611px;
+  box-shadow: 3px 4px 2px 0px #F5F5F5;
+border-radius: 12px;
+background-color: #FFFFFF;
+position: absolute;
+left: 140px;
+}
+
+
+
+.dolacaq_hisse{
+  width: 492px;
+  height: 22px;
+  
+  border-radius: 8px;
+  margin-left: 43px;
+  margin-top: 20px;
+}
+.dolacaq_hisse_div{
+  width: 50%;
+  height: 100%;
+  background-color: #038477;
+  border-radius: 8px;
+}
+
+.head_frame{
+width: 150px;
+height: 50px;
+display: flex;
+align-items: center;
+justify-content: end;
+
+}
+.num{
+  display: none;
+  margin-left: 10px;
+}
+.bonus{
+  display: block;
+  margin-left: 10px;
+}
+
+.kubok_img{
+  width: 300px;
+  height:300px;
+  position: absolute;
+ margin-top: 430px;
+ margin-left: -235px;
+}
+.header{
+  width: 672.12px;
+  height: 1201.18px;
+  position: absolute;
+  top: -108px;
+  right: 273px;
+  
+}
+.head_image{
+  height: 800px;
+  width: 672.12px;
+  object-fit: cover;
+}
+
+.head_line{
+  border: 1px solid #FFFFFF;
+  width: 607px;
+  position: absolute;
+  rotate: -90deg;
+  right: 340px;
+}
+.head_line2{
+  width: 390px;
+  border: 2px solid #FFFFFF;
+  position: absolute;
+  rotate: -90deg;
+  right: 457px;
+}
+.title{
+  width: 250px;
+  height: 173.18px;
+  position: absolute;
+  top: 60px;
+  left: 40px;
+}
+.parag{
+  width: 234px;
+  height: 76px;
+  font-family: "Inter", sans-serif;
+font-size: 14px;
+font-weight: 400;
+line-height: 19.25px;
+text-align: left;
+margin-top: 25px;
+color: #FFFFFF;
+}
+.talent_score{
+  width: 218px;
+  height: 53.18px;
+  padding: 0px, 4px, 0px, 4px;
+  gap: 8px;
+
+}
+.talent_image{
+  width: 218px;
+  height: 30px;
+  object-fit: cover;
+}
+
+.suni{
+  font-family:  "Inter", sans-serif;
+font-size: 14px;
+font-weight: 400;
+line-height: 16.94px;
+text-align: left;
+ color: #FFFFFF;
+ margin-top: 10px;
+}

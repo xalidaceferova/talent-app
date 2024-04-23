@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+.prac_ques{
+    width: 490px;
+    height: 71px;
+    margin-left: 43px;
+    margin-top: 30px;
+}
+.first_prac_ques{
+width: 490px;
+height: 35px;
+font-family: "Inter", sans-serif;
+font-size: 16px;
+font-weight: 400;
+line-height: 19.36px;
+text-align: left;
+color: #000000;
+padding: 8px;
+gap: 8px;
+}
+.first_inp{
+    width: 490px;
+    height: 36px;
+    border-radius: 25px;
+    background-color: #F2F6F6;
+    text-indent: 20px;
+}
+.first_inp_date{
+    color:#BEBEBE ;
+    width: 490px;
+    height: 36px;
+    border-radius: 25px;
+    background-color: #F2F6F6;
+    text-indent: 10px;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+   color: #BEBEBE;
+    width: 20px;
+    height: 20px;
+    opacity: 0.4;
+}
+.notwork_label{
+font-family:"Inter", sans-serif;
+font-size: 14px;
+font-weight: 400;
+line-height: 16.94px;
+text-align: left;
+color: #000000;
+}
+#notwork{
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    border: 1px solid #D9D9D9;
+    accent-color: white;
+    color: #038477;
+    
+}
+.notworking_div{
+    width: 163px;
+    height: 17px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    margin-left: 360px;
+}
+.istecrubesi_btn{
+    width: 180px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #F2F6F6;
+    text-align: center;
+font-family: "Inter", sans-serif;
+font-size: 16px;
+font-weight: 400;
+line-height: 19.36px;
+color: #444444;
+margin-top: 20px;
+margin-left: 200px;
+}

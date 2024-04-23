@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+.idman_head{
+    width: 190px;
+    height: 22px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.78px;
+    text-align: left;
+    color: #038477;
+   margin-top: 33px;
+   margin-left: 43px;
+   font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+  }
