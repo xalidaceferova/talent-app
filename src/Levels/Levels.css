@@ -7,8 +7,7 @@
    display: flex;
   position: relative;
 }
-.merhele{
-  
+.merhele{ 
   width: 235px;
   height: 40px;
   display: flex;
@@ -136,6 +135,7 @@ left: 140px;
   height: 100%;
   background-color: #038477;
   border-radius: 8px;
+  transition: 1s;
 }
 
 .head_frame{

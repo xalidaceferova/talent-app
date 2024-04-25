@@ -43,14 +43,9 @@
     justify-content: space-between;
 }
 #formborder{
-    display:block;
+    display:none;
 }
-#formtwo{
-    display: block;
-}
-#formthree{
-    display: block;
-}
+
 .subbtn{
 width: 180px;
 height: 50px;

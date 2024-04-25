@@ -6,7 +6,7 @@ const Merhele1 = ({leter,setCurrentstep,arr}) => {
   return (
     <>
     
-    <Radio setCurrentstep={setCurrentstep} arr={arr}></Radio>
+    <Radio  setCurrentstep={setCurrentstep} arr={arr}></Radio>
           <Selection leter={leter}></Selection>
     
     </>

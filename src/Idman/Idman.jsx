@@ -2,14 +2,11 @@ import "./Idman.css"
 import Merhele1 from '../Merhele1'
 import Merhele2 from '../Merhele2'
 const Idman = ({page,leter,setCurrentstep,arr}) => {
-
-
-  console.log("first")
   const PageDisplay=()=>{
         if(page===0){
-             return (<Merhele1 leter={leter} setCurrentstep={setCurrentstep} arr={arr}></Merhele1>)
+             return (<Merhele1  leter={leter} setCurrentstep={setCurrentstep} arr={arr}></Merhele1>)
         }else {
-          return (<Merhele2></Merhele2>)
+          return (<Merhele2 leter={leter}></Merhele2>)
         }
   }
   return (
@@ -19,7 +16,7 @@ const Idman = ({page,leter,setCurrentstep,arr}) => {
             <span className="idman_head">İdman</span>
           </div>
           <div className="dolacaq_hisse">
-            <div className="dolacaq_hisse_div"></div> 
+            <div style={{width:page===0?"50%" :"100%"}} className="dolacaq_hisse_div"></div> 
             </div>
  
 

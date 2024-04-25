@@ -16,11 +16,22 @@ import Job from "../Images/Frame (1).png";
 import Yekun from "../Images/Yekun.png";
 import Head from "../Images/Rectangle 24 (1).png";
 import Basliq from "../Images/Basliq.png";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as  z from "zod"
+
+
+
+
 
 const Levels = ({ currentstep, setCurrentstep }) => {
+
+  
+  
  const[leter,setLetter]=useState("")
 const[job,setJob]=useState("")
 const[page,setPage]=useState(0)
+
   const arr = [
     "Təhsil",
     "Dil bilikləri",
@@ -48,7 +59,7 @@ const[page,setPage]=useState(0)
     {
       desc: "İdman",
       img: Kubok,
-      div: <Idman page={page} leter={leter}  setCurrentstep={setCurrentstep} arr={arr}></Idman>,
+      div: <Idman  page={page} leter={leter}  setCurrentstep={setCurrentstep} arr={arr}></Idman>,
     },
     {
       desc: "İş təcrübəsi",
@@ -74,7 +85,14 @@ const[page,setPage]=useState(0)
      firsticon.classList.add("arrowtwo")
      }
     
+     setCurrentstep((prev)=>(prev===exper.length-3?prev:prev+1))
+     if(currentstep===exper.length-3){
+         setPage((curpage)=>curpage+1)
      
+     }if(page===1 ){
+             setCurrentstep((prev)=>prev+1)
+     }
+    
   }
   const goToPreviousStep = () =>{
     const geribtn=document.getElementById("geri")
@@ -85,7 +103,14 @@ const[page,setPage]=useState(0)
       firsticon.classList.remove("arrowtwo")
       firsticon.classList.add("arrowone")
     }
-    setCurrentstep((prev) => (prev <= 0 ? prev : prev - 1 )) 
+    setCurrentstep((prev) => (prev === exper.length-3 ? prev : prev - 1 )) 
+    if(currentstep===exper.length-3){
+      setPage((curpage)=>curpage-1)
+  
+  }if(page===0 ){
+          setCurrentstep((prev)=>prev-1)
+  }
+    
     const save=JSON.parse(localStorage.getItem("Selection"))
    if(save!==null){
     setLetter(save)
@@ -109,6 +134,7 @@ const[page,setPage]=useState(0)
               <p className="suni">Süni intelekt sistemi</p>
             </div>
             <div className="parag">
+           
               Bu formu doldurduqdan sonra öz yaşıdlarınız arasında ən yaxşı
               hansı faizlikdə olduğunuzu müəyyən edə biləcəksiniz.
             </div>
@@ -146,12 +172,12 @@ const[page,setPage]=useState(0)
 
       <div className="butons">
         <div className="but_style">
-          <button id="geri" className="but_one" onClick={goToPreviousStep}>
+          <button disabled={currentstep===0} id="geri" className="but_one" onClick={goToPreviousStep}>
             <FaArrowLeft id="icon1" className="arrowone" />
             Geri
           </button>
 
-          <button id="secbut" className="but_two" onClick={goToNextStep}>
+          <button  disabled={currentstep===exper.length-1} id="secbut" className="but_two" onClick={goToNextStep}>
             Növbəti
             <FaArrowRightLong id="icon2" className="arrowtwo" />
         </button>
