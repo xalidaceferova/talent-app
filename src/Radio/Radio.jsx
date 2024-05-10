@@ -1,72 +1,66 @@
-import React from 'react'
-import { Label } from "../components/ui/label"
-import { RadioGroup, RadioGroupItem } from "../components/ui/radio-group"
-import "./Radio.css"
-import { zodResolver } from "@hookform/resolvers/zod";
-import * as  z from "zod"
-import { useForm } from 'react-hook-form';
-const formSchema=z.object({
-  answer: z.string(),
-  user:z.string()
-})
-
-
-const Radio = ({ setCurrentstep,arr}) => {
-  const{register,handleSubmit,formState:{errors}}=useForm({
-    resolver:zodResolver(formSchema)
-})
-  const onFormData=(data)=>{
-    console.log(data)
-}
+import React from "react";
+import { RadioGroup, RadioGroupItem } from "../components/ui/radio-group";
+import "./Radio.css";
+import {
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "../components/ui/form";
+const Radio = ({ setCurrentstep, form, setIsactive }) => {
   return (
     <>
-    
-    <div >
-
-    <form onSubmit={handleSubmit(onFormData)}>
-    <RadioGroup  >
-  <div className='radios'>
-
- <div className='check_ques'>Məşğul olduğunuz idman növü var?*</div>
-
-  <div className='checks' >
-  <div className="check_beli">
-    
-  <Label htmlFor="option-one" className="label">Bəli</Label>
-    <RadioGroupItem value="option-one"  id="option" className="mark" onClick={()=>{
-       let selectBorder=document.getElementById("formborder")
-      selectBorder.style.display="block";
-    }} {...register("answer")} />
-   
-    
-   
-  </div>
-  <div className="check_beli">
-  <Label htmlFor="option-two"  className="label">Xeyr</Label>
-    <RadioGroupItem  value="option-two"  id="option-two" className="mark" onClick={()=>{
-      setCurrentstep(prev => prev === arr.length - 1 ? prev : prev + 1)
-    }} {...register("user")}  />
-
-   
-  <input type="radio" name='same' value="ujas" onChange={(e)=>{
-           console.log(e.target.value)
-
-  }}/>
-  <input type="radio" name='same'  value="ujas1" onChange={(e)=>{
-           console.log(e.target.value)
-
-  }}/>
-  </div>
-  </div>
-  </div >
-</RadioGroup  >
-
-  <button type='submit'>click</button>
-    </form>
-    </div>
-  
+      <FormField
+        control={form.control}
+        name="type"
+        render={({ field }) => (
+          <FormItem className="radios">
+            <FormLabel className="check_ques">
+              Məşğul olduğunuz idman növü var?*
+            </FormLabel>
+            <FormControl>
+              <RadioGroup
+                onValueChange={field.onChange}
+                defaultValue={field.value}
+                className="checks"
+              >
+                <FormItem>
+                  <div className="check_beli">
+                    <FormLabel className="label">Bəli</FormLabel>
+                    <FormControl>
+                      <RadioGroupItem
+                        value="all"
+                        className="mark"
+                        onClick={() => {
+                          setIsactive(true);
+                        }}
+                      />
+                    </FormControl>
+                  </div>
+                </FormItem>
+                <FormItem>
+                  <div className="check_beli">
+                    <FormLabel className="label">Xeyr</FormLabel>
+                    <FormControl>
+                      <RadioGroupItem
+                        value="none"
+                        className="mark"
+                        onClick={() => {
+                          setCurrentstep((prev) => prev + 1);
+                        }}
+                      />
+                    </FormControl>
+                  </div>
+                </FormItem>
+              </RadioGroup>
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
     </>
-  )
-}
+  );
+};
 
-export default Radio
+export default Radio;

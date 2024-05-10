@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const DilBilikleri = () => {
-  return (
-    <div>DilBilikleri</div>
-  )
-}
+  return <div>DilBilikleri</div>;
+};
 
-export default DilBilikleri
+export default DilBilikleri;
